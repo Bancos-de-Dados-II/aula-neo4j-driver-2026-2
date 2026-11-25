@@ -7,8 +7,9 @@ let driver = neo4j.driver(
 
 let session = driver.session();
 
-session.run('MATCH (u1:Usuario{email:$email1}) MATCH (u2:Usuario{email:$email2}) MERGE (u1)-[:AMIGO{desde:date()}]->(u2)',
-    {email1: 'maria@gmail.com', email2:'pedro@gmail.com'}
-).then(result =>{
-    console.log(result.summary.counters);
+session.run('MATCH (u1:Usuario{email:$email}) MATCH (u1)-[:AMIGO*1..2]->(u2) RETURN u2.email',{
+    email:'maria@gmail.com'
+}).then(result =>{
+    console.log(result.records.map(
+        record => record.get('u2.email')));
 });
