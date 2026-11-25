@@ -7,4 +7,8 @@ let driver = neo4j.driver(
 
 let session = driver.session();
 
-await driver.close();
+session.run('MERGE (u:Usuario{nome:$nome, email:$email})',
+    {nome:'Pedro', email:'pedro@gmail.com'}
+).then(result =>{
+    console.log(result);
+});
