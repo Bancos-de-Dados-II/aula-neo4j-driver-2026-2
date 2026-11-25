@@ -1,0 +1,24 @@
+{
+  "name": "aula-neo4j-driver-2026-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bancos-de-Dados-II/aula-neo4j-driver-2026-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Bancos-de-Dados-II/aula-neo4j-driver-2026-2/issues"
+  },
+  "homepage": "https://github.com/Bancos-de-Dados-II/aula-neo4j-driver-2026-2#readme",
+  "dependencies": {
+    "neo4j-driver": "^6.3.2"
+  }
+}
